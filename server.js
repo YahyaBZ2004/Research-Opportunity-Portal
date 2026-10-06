@@ -7,6 +7,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());   // lets the server read JSON sent in the body
 
+app.use(express.static('public'));
+
 // ENDPOINT 1: get all opportunities
 app.get('/api/opportunities', (req, res) =>
 {
@@ -14,6 +16,7 @@ app.get('/api/opportunities', (req, res) =>
     {
         if (err)
         {
+            console.log(err);
             return res.status(500).json({ error: 'Server error' });
         }
         res.status(200).json(rows);

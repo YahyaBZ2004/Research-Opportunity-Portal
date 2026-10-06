@@ -9,5 +9,17 @@ const db = mysql.createPool({
     dateStrings: true
 });
 
+db.query('SELECT 1', (err) =>
+{
+    if (err)
+    {
+        console.log('DATABASE CONNECTION FAILED:');
+        console.log(err.message);
+    } else
+    {
+        console.log('Database connected OK');
+    }
+});
+
 module.exports = db;
 
