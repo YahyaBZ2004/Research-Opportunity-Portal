@@ -34,7 +34,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"title\": \"AI for Healthcare\",\r\n  \"description\": \"Using machine learning to detect diseases early.\",\r\n  \"research_area\": \"Machine Learning\",\r\n  \"faculty_name\": \"Dr. Ahmed\",\r\n  \"department\": \"Computer Science\",\r\n  \"required_skills\": \"Python, Statistics\",\r\n  \"positions\": 2,\r\n  \"deadline\": \"2026-12-31\"\r\n}",
+          "raw": "{\n  \"title\": \"AI for Network secuity\",\n  \"description\": \"analyzing packects for security threats\",\n  \"research_area\": \"ML classsification models\",\n  \"faculty_name\": \"Dr. Qasim\",\n  \"department\": \"Computer Science\",\n  \"required_skills\": \"Python, Basic ML\",\n  \"positions\": 2,\n  \"deadline\": \"2026-12-06\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -62,7 +62,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/api/opportunities/1",
+          "raw": "http://localhost:3000/api/opportunities/2",
           "protocol": "http",
           "host": [
             "localhost"
@@ -71,7 +71,7 @@
           "path": [
             "api",
             "opportunities",
-            "1"
+            "2"
           ]
         }
       },
@@ -84,7 +84,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\"title\": \"AI for Healthcare Updated\", \"positions\": 3}",
+          "raw": "{\r\n  \"positions\": 610,\r\n   \"deadline\": \"2026-12-02\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -92,7 +92,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/api/opportunities/1",
+          "raw": "http://localhost:3000/api/opportunities/2",
           "protocol": "http",
           "host": [
             "localhost"
@@ -101,7 +101,7 @@
           "path": [
             "api",
             "opportunities",
-            "1"
+            "2"
           ]
         }
       },
@@ -114,7 +114,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\"status\": \"Closed\"}",
+          "raw": "{\"status\": \"Open\"}",
           "options": {
             "raw": {
               "language": "json"
@@ -122,7 +122,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/api/opportunities/1",
+          "raw": "http://localhost:3000/api/opportunities/2",
           "protocol": "http",
           "host": [
             "localhost"
@@ -131,7 +131,7 @@
           "path": [
             "api",
             "opportunities",
-            "1"
+            "2"
           ]
         }
       },
@@ -173,7 +173,7 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/api/opportunities/4",
+          "raw": "http://localhost:3000/api/opportunities/1",
           "protocol": "http",
           "host": [
             "localhost"
@@ -182,7 +182,7 @@
           "path": [
             "api",
             "opportunities",
-            "4"
+            "1"
           ]
         }
       },
