@@ -43,6 +43,12 @@ app.post('/api/opportunities', (req, res) =>
         return res.status(400).json({ error: 'Deadline must be a valid date (YYYY-MM-DD)' });
     }
 
+
+    if (Number(positions) < 1)
+    {
+        return res.status(400).json({ error: 'Positions must be at least 1' });
+    }
+
     const sql = `INSERT INTO opportunities
     (title, description, research_area, faculty_name, department,
      required_skills, positions, deadline)
@@ -116,6 +122,18 @@ app.put('/api/opportunities/:id', (req, res) =>
         if (status !== 'Open' && status !== 'Closed')
         {
             return res.status(400).json({ error: 'Status must be Open or Closed' });
+        }
+
+        // validation: deadline must be a real date like 2026-11-30
+        const d = new Date(deadline + 'T00:00:00Z');
+        if (isNaN(d.getTime()) || d.toISOString().slice(0, 10) !== deadline)
+        {
+            return res.status(400).json({ error: 'Deadline must be a valid date (YYYY-MM-DD)' });
+        }
+
+        if (Number(positions) < 1)
+        {
+            return res.status(400).json({ error: 'Positions must be at least 1' });
         }
 
         // step 4: save the changes
